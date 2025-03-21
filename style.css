@@ -51,21 +51,24 @@ body {
 }
 
 .message {
-  background: #fce700;
-  bottom: 50px;
-  font-family: "Poppins", sans-serif;
-  font-size: 40px;
-  font-style: normal;
-  font-weight: 800;
-  height: 60px;
-  line-height: 1;
-  padding: 10px;
-  position: absolute;
-  opacity: 0; /* El elemento empieza invisible */
-  animation: fadeIn 1s forwards;
-  animation-delay: 2s; /* El elemento aparecerá después de 60 segundos */
-}
-
+    background: #fce700;
+    font-family: "Poppins", sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 1.2; /* un poco más alto para no cortar letras */
+    padding: 20px 30px;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    animation-delay: 2s;
+    z-index: 9999;
+    border-radius: 8px; /* opcional: para que se vea más bonito */
+    white-space: nowrap; /* evita que el texto se rompa en otra línea (opcional) */
+  }
 @keyframes fadeIn {
   to {
     opacity: 1; /* El elemento se vuelve visible */
